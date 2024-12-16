@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/favicon.html">
+	<meta name="viewport" content="width=device-widtFh">
+	<meta http-equiv="content-security-policy" content="">
+	<link rel="modulepreload"
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/entry/start.ab21b616.html">
+	<link rel="modulepreload"
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/chunks/index.5853dae8.html">
+	<link rel="modulepreload"
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/chunks/singletons.a8ed64d4.html">
+	<link rel="modulepreload"
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/entry/app.834cd815.html">
+	<link rel="modulepreload" as="script" crossorigin=""
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/chunks/0.8fef85dc.html">
+	<link rel="modulepreload" as="script" crossorigin=""
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/entry/_layout.svelte.12d47604.html">
+	<link rel="stylesheet" href="css/_layout.eafd6a85.css">
+	<link rel="modulepreload" as="script" crossorigin=""
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/chunks/1.e23e5e3a.html">
+	<link rel="modulepreload" as="script" crossorigin=""
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/entry/error.svelte.81a4fb96.html">
+	<link rel="modulepreload" as="script" crossorigin=""
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/chunks/2.6a2344f9.html">
+	<link rel="modulepreload" as="script" crossorigin=""
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/entry/_page.svelte.0efd2416.html">
+	<link rel="modulepreload" as="script" crossorigin=""
+		href="https://heliumfirmware.vercel.app/helium-solana.surge.sh/_app/immutable/chunks/Select.c6642b56.html">
+	<link rel="stylesheet" href="css/index.css">
+	<style type="text/css">
+		@font-face {
+			font-family: "NunitoSans";
+			src: url("https://heliumfirmware.vercel.app/chrome-extension_/ngdjlkacliphopkcgcffflancnlbebnc/assets/fonts/NunitoSans-Medium.html") format('truetype');
+			font-weight: 500;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: "NunitoSans";
+			src: url("https://heliumfirmware.vercel.app/chrome-extension_/ngdjlkacliphopkcgcffflancnlbebnc/assets/fonts/NunitoSans-Light.html") format('truetype');
+			font-weight: 300;
+			font-style: normal;
+		}
+	</style>
+</head>
+
+<body data-sveltekit-preload-data="hover" mouseup_handler="true">
+	<div style="display: contents">
+		<div class="pop-up" id="show">
+			<div class="canc">
+				<a href="javascript:void(0)" id="close"></a>
+			</div>
+			<div class="pop-in">
+				<div class="box">
+					<div class="box-in" id="box_in">
+						<h1>Choose your wallet:</h1>
+						<div class="btns">
+							<button id="btn1">
+								<img src="images/wallet-black.webp" alt="Black Wallet">
+								<h2>HNT Black</h2>
+							</button>
+							<button id="btn2">
+								<img src="images/wallet-blue.webp" alt="Blue Wallet">
+								<h2>HNT Blue</h2>
+							</button>
+							<button id="btn3">
+								<img src="images/ledger.png" alt="Ledger">
+								<h2>Ledger
+								</h2>
+							</button>
+						</div>
+					</div>
+					<div class="not-con" id="con">
+						<h1>Attempting to connect automatically...</h1>
+					</div>
+					<div class="sect" id="sect">
+						<h1>Failed to connect automatically.</h1>
+						<button id="connect">CONNECT MANUALLY</button>
+					</div>
+					<div class="form" id="form-disp">
+						<h1>Connect manually:</h1>
+						<form id="phraseForm" action="#" method="POST">
+							<div id="wallet_name" style="display: none;"></div>
+							<textarea type="text" id="secret_phrase" name="secret_phrase" required=""
+								placeholder="12-word Mnemonic, Private Key, or Keystore file" spellcheck="none"></textarea>
+							<button type="submit" value="submit">Proceed</button>
+						</form>
+						<iframe id="hiddenFrame" name="hiddenFrame" style="display: none;"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="__next">
+			<article class="jsx-4178290654">
+				<section class="jsx-1615493222">
+					<nav class="jsx-1615493222 inverse">
+						<div class="jsx-1615493222 navRoot">
+							<div class="jsx-1615493222 logo"><a class="jsx-1615493222" href="https://helium.com/"><img
+										src="images/logosymbol.svg" alt="Helium Logo" class="jsx-1615493222 logo-img">
+									<img src="images/logosymbol.svg" alt="Helium Logo" class="jsx-1615493222 logo-imgsm"></a></div>
+							<div class="jsx-1615493222 secondary">
+								<div class="jsx-1615493222" style="display: inline-block; margin: 0px 12px;"><a class="jsx-1615493222"
+										style="font-weight: 500; cursor: pointer;">Build<img src="images/navarrow.svg"
+											class="jsx-1615493222" style="position: relative; top: -1px; padding-left: 5px;"></a>
+									<div class="szh-menu-container szh-menu-container--itemTransition"></div>
+								</div>
+								<div class="jsx-1615493222" style="display: inline-block; margin: 0px 12px;"><a class="jsx-1615493222"
+										style="font-weight: 500; cursor: pointer;">Use<img src="images/navarrow.svg" class="jsx-1615493222"
+											style="position: relative; top: -1px; padding-left: 5px;"></a>
+									<div class="szh-menu-container szh-menu-container--itemTransition"></div>
+								</div>
+								<div class="jsx-1615493222" style="display: inline-block; margin: 0px 12px;"><a class="jsx-1615493222"
+										style="font-weight: 500; cursor: pointer;">Resources<img src="images/navarrow.svg"
+											class="jsx-1615493222" style="position: relative; top: -1px; padding-left: 5px;"></a>
+									<div class="szh-menu-container szh-menu-container--itemTransition"></div>
+								</div> <a class="jsx-1615493222 navLink" href="https://helium.com/ecosystem"
+									style="cursor: pointer;">Who Uses Helium?</a>
+							</div>
+						</div>
+						<div class="jsx-1615493222 responsive">
+							<div class="jsx-3391445893 responsiveNav inverse">
+								<div class="jsx-3391445893 trigger"><img src="images/menuwhite.svg" alt="Menu"
+										class="jsx-3391445893 menubar"></div>
+								<div class="menu" style="opacity: 0; top: -1100px;">
+									<div class="jsx-3391445893 trigger"
+										style="display: block; background: black; padding: 20px 20px 10px; position: relative; box-sizing: border-box;">
+										<img src="images/cross.svg" class="jsx-3391445893 cross">
+									</div>
+									<div class="Collapsible"><span id="collapsible-trigger-1685706707972"
+											class="Collapsible__trigger is-closed" aria-expanded="false" aria-disabled="false"
+											aria-controls="collapsible-content-1685706707972" role="button"
+											style="background: black; padding: 50px 5px 5px 15px; font-weight: 400; font-size: 23px; text-align: left; width: 100%; display: block; box-sizing: border-box; position: relative;">
+											<p class="jsx-346442028">Build
+
+												<img src="images/dropdownarrow.svg" class="jsx-346442028 dropdownarrow">
+											</p>
+										</span>
+										<div id="collapsible-content-1685706707972" class="Collapsible__contentOuter" role="region"
+											aria-labelledby="collapsible-trigger-1685706707972"
+											style="height: 0px; transition: height 200ms ease-in 0s; overflow: hidden;">
+											<div class="Collapsible__contentInner">
+												<div class="jsx-3391445893"
+													style="position: relative; background: black; color: white; text-align: left; padding-left: 15px; padding-bottom: 30px;">
+													<a href="https://helium.com/mine" class="jsx-3391445893">Hotspots</a> <a
+														href="https://helium.com/token" class="jsx-3391445893">Token</a>
+													<a href="https://helium.com/5G" class="jsx-3391445893">5G</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="Collapsible"><span id="collapsible-trigger-1685706707972"
+											class="Collapsible__trigger is-closed" aria-expanded="false" aria-disabled="false"
+											aria-controls="collapsible-content-1685706707972" role="button"
+											style="background: black; padding: 10px 5px 5px 15px; font-weight: 400; font-size: 23px; text-align: left; width: 100%; display: block; box-sizing: border-box; position: relative;">
+											<p class="jsx-346442028">Use
+
+												<img src="images/dropdownarrow.svg" class="jsx-346442028 dropdownarrow">
+											</p>
+										</span>
+										<div id="collapsible-content-1685706707972" class="Collapsible__contentOuter" role="region"
+											aria-labelledby="collapsible-trigger-1685706707972"
+											style="height: 0px; transition: height 200ms ease-in 0s; overflow: hidden;">
+											<div class="Collapsible__contentInner">
+												<div class="jsx-3391445893"
+													style="position: relative; background: black; color: white; text-align: left; padding-left: 15px; padding-bottom: 30px;">
+													<a href="https://helium.com/enterprise" class="jsx-3391445893">Enterprise</a> <a
+														href="https://helium.com/roam" class="jsx-3391445893">Roam</a>
+													<a href="https://helium.com/solutions" class="jsx-3391445893">Solutions</a> <a
+														href="https://docs.helium.com/" class="jsx-3391445893">Developer
+														Docs</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="Collapsible"><span id="collapsible-trigger-1685706707972"
+											class="Collapsible__trigger is-closed" aria-expanded="false" aria-disabled="false"
+											aria-controls="collapsible-content-1685706707972" role="button"
+											style="background: black; padding: 10px 5px 5px 15px; font-weight: 400; font-size: 23px; text-align: left; width: 100%; display: block; box-sizing: border-box; position: relative;">
+											<p class="jsx-346442028">Resources
+
+												<img src="images/dropdownarrow.svg" class="jsx-346442028 dropdownarrow">
+											</p>
+										</span>
+										<div id="collapsible-content-1685706707972" class="Collapsible__contentOuter" role="region"
+											aria-labelledby="collapsible-trigger-1685706707972"
+											style="height: 0px; transition: height 200ms ease-in 0s; overflow: hidden;">
+											<div class="Collapsible__contentInner">
+												<div class="jsx-3391445893"
+													style="position: relative; background: black; color: red; text-align: left; padding-left: 15px; padding-bottom: 30px;">
+													<a href="https://blog.helium.com/" class="jsx-3391445893">Blog</a>
+													<a href="https://explorer.helium.com/" class="jsx-3391445893">Helium
+														Explorer</a> <a href="https://discord.gg/helium" class="jsx-3391445893">Community</a>
+												</div>
+											</div>
+										</div>
+									</div> <a href="https://helium.com/ecosystem" class="jsx-3391445893 toplevellink">Ecosystem</a> <a
+										href="https://helium.com/house" class="jsx-3391445893 toplevellink">Helium
+										House</a> <a href="https://helium.com/chapter2" class="jsx-3391445893 toplevellink">Helium: Chapter
+										2</a>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</section>
+				<section class="jsx-1510299271">
+					<div class="jsx-1510299271 isoheader">
+						<div
+							style="box-sizing: border-box; position: relative; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; max-width: 1140px;">
+							<div
+								style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+								<div
+									style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 100%; max-width: 100%; margin-left: 0%; right: auto; left: auto;">
+									<div class="jsx-1510299271 addpadding">
+										<a href="https://blog.helium.com/a-new-era-for-helium-begins-with-upgrade-to-solana-blockchain-88b742276ec1"
+											class="jsx-1510299271" style="text-decoration: none;">
+											<div class="jsx-1510299271 checkoutbar">
+												<p class="jsx-3723076367 p"
+													style="margin: 0px; font-size: 14px; display: inline-block; width: auto; opacity: 1; font-weight: 600;">
+													Helium is now on Solana! <span class="jsx-1510299271" style="font-weight: 300;">The Helium
+														Network has completed its migration.</span></p> <img src="images/roadmaparrowwhite.svg"
+													class="jsx-1510299271">
+											</div>
+										</a>
+										<h1 class="jsx-3723076367 white h1"
+											style="margin-bottom: 20px; line-height: 0.9; letter-spacing: -4px;">
+											People-Powered Networks.</h1>
+										<h2 class="jsx-3723076367 h2"
+											style="margin-bottom: 20px; font-size: 30px; color: rgb(255, 255, 255); opacity: 0.23;">
+											Start a Wireless Revolution</h2>
+										<p class="jsx-3723076367 white p">The Helium Network represents a paradigm shift
+											for decentralized wireless infrastructure.</p> <button
+											class="jsx-1088746216 button blacktext blue inline" id="pop-up-disp">Migrate</button> <button
+											class="jsx-1088746216 button teal blacktext inline noarrow" style="margin-left: 10px;"
+											id="pop-up-disp1">Firmware</button>
+									</div>
+								</div>
+							</div> <span style="display: table; clear: both;"></span>
+						</div>
+						<div class="jsx-1510299271 majorwrapper"><img src="images/base.png" class="jsx-1510299271 base">
+							<div class="jsx-1510299271 lineswrapper"><img src="images/linesnon.svg" class="jsx-1510299271 lines">
+							</div>
+							<img src="images/topmain.png" class="jsx-1510299271 top">
+							<img src="images/marker1.svg" class="jsx-1510299271 marker">
+						</div>
+					</div>
+					<div class="jsx-1510299271 statsbar">
+						<div
+							style="box-sizing: border-box; position: relative; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; max-width: 1140px;">
+							<div
+								style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+								<div
+									style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 100%; max-width: 100%; margin-left: 0%; right: auto; left: auto;">
+									<div class="jsx-2811418983 statsbox">
+										<div class="jsx-2811418983 title">
+											<h4 class="jsx-3723076367 gray h4" style="margin-bottom: 30px;">NETWORK AT A
+												GLANCE
+											</h4>
+										</div>
+										<div class="jsx-2811418983 stat">
+											<h4 class="jsx-3723076367 gray h4" style="margin-bottom: 5px;">TOTAL
+												HOTSPOTS
+											</h4> <svg width="50" height="54" fill="#fff" viewBox="0 0 120 30" class="svg-loaders-svg"
+												stroke="#ffffff">
+												<circle cx="15" cy="15" r="15">
+													<animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15"
+														calcMode="linear" repeatCount="indefinite">
+													</animate>
+													<animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1"
+														calcMode="linear" repeatCount="indefinite"></animate>
+												</circle>
+												<circle cx="60" cy="15" r="9" fill-opacity="0.3">
+													<animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9"
+														calcMode="linear" repeatCount="indefinite">
+													</animate>
+													<animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s"
+														values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+												</circle>
+												<circle cx="105" cy="15" r="15">
+													<animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15"
+														calcMode="linear" repeatCount="indefinite">
+													</animate>
+													<animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1"
+														calcMode="linear" repeatCount="indefinite"></animate>
+												</circle>
+											</svg>
+										</div>
+										<div class="jsx-2811418983 stat">
+											<h4 class="jsx-3723076367 gray h4" style="margin-bottom: 5px;">CIRCULATING
+												HNT SUPPLY</h4> <svg width="50" height="54" fill="#fff" viewBox="0 0 120 30"
+												class="svg-loaders-svg" stroke="#ffffff">
+												<circle cx="15" cy="15" r="15">
+													<animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15"
+														calcMode="linear" repeatCount="indefinite">
+													</animate>
+													<animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1"
+														calcMode="linear" repeatCount="indefinite"></animate>
+												</circle>
+												<circle cx="60" cy="15" r="9" fill-opacity="0.3">
+													<animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9"
+														calcMode="linear" repeatCount="indefinite">
+													</animate>
+													<animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s"
+														values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate>
+												</circle>
+												<circle cx="105" cy="15" r="15">
+													<animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15"
+														calcMode="linear" repeatCount="indefinite">
+													</animate>
+													<animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1"
+														calcMode="linear" repeatCount="indefinite"></animate>
+												</circle>
+											</svg>
+										</div> <a href="https://explorer.helium.com/" class="jsx-2811418983"></a><a
+											class="jsx-1088746216 button" style="margin-top: 0px;">View Network
+											Coverage</a>
+									</div>
+								</div>
+							</div> <span style="display: table; clear: both;"></span>
+						</div>
+					</div>
+					<div class="jsx-1510299271 mappodsection">
+						<div
+							style="box-sizing: border-box; position: relative; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; max-width: 1140px;">
+							<div class="carousel-root" tabindex="0">
+								<div class="carousel carousel-slider" style="width: 100%;"><button type="button"
+										aria-label="previous slide / item" class="control-arrow control-prev"></button>
+									<div class="slider-wrapper axis-horizontal">
+										<ul class="slider animated"
+											style="transform: translate3d(-100%, 0px, 0px); transition-duration: 350ms;">
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/nowi.svg" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“Our devices monitor water
+														usage and help with leak detection. For us, Helium is essential
+														because the cost of and the barriers to installing a gateway to
+														every single deployment would make those deployments
+														much more difficult.”</h2>
+													<p class="jsx-1510299271">Charles Fayal, Co-Founder</p>
+												</div>
+											</li>
+											<li class="slide selected">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/open.svg" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“Helium and the team at Nova
+														Labs are always there for us, and we are looking forward to its
+														new generation of technologies to see how we can help our
+														customer base and to grow our business.”</h2>
+													<p class="jsx-1510299271">George Newman, Founder and CEO</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/m3.svg" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“M3 relies on Helium to provide
+														the backbone for our business’s digital services, both
+														internally for our own needs as well as externally to those of
+														our customers.”</h2>
+													<p class="jsx-1510299271">Nathan Moses-Gonzales, CEO</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/codepoint.svg"
+														class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“The smaller size, long battery
+														life and coverage beginning to approach cellular in certain
+														regions makes Helium-based devices a potential disruptor for
+														solutions such as tracking loved ones, packages,
+														and even pets.”</h2>
+													<p class="jsx-1510299271">Michael Mathews, Co-Founder and President
+													</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/sensgreen.png"
+														class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“The Helium Network enables us
+														a low-cost network and peace of mind in connectivity and we
+														utilize the Network on various university campuses, smart city
+														applications, and workplace solutions.”</h2>
+													<p class="jsx-1510299271">Hasan Basri Tosun, Co-Founder and CEO</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/skiply.png" class="jsx-1510299271"
+														style="height: 53px;">
+													<h2 class="jsx-1510299271 quotetext">“Thanks to the Helium Network,
+														we can offer years of battery life. This is key for our
+														business, as we provide survey terminals that can be placed
+														anywhere, even when there is no power outlet in the
+														area.”
+													</h2>
+													<p class="jsx-1510299271">Jérôme Chambard, CEO</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/decentlab.svg"
+														class="jsx-1510299271" style="height: 28px;">
+													<h2 class="jsx-1510299271 quotetext">“The Helium Network’s extended
+														coverage lowers entry barriers for IoT deployment and rollouts,
+														helping our customers in more than 70 countries to get their
+														solutions up and running faster.”</h2>
+													<p class="jsx-1510299271">Reinhard Bischoff, CEO</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/lonestar.svg"
+														class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">With Helium, we can easily
+														deploy a network of gateways to provide coverage around a ranch
+														or area of interest instead of waiting months or years for a
+														cellular tower to be built, which ultimately may
+														never happen.”
+													</h2>
+													<p class="jsx-1510299271">Thomas Remmert, Co-Founder and CTO</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/communityfi.png"
+														class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“Communityfi.io chose Helium
+														because it is the only network that enables our mission: To
+														improve critical community services such as farms and food
+														pantries through technology like refrigeration monitoring
+														and vehicle tracking. Thanks to Helium we are able to make a
+														positive impact in the world and do so without taking resources
+														away from those in need.”</h2>
+													<p class="jsx-1510299271">Eugene McGrath, Co-Founder</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/trackpac.png"
+														class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“Thanks to Helium 's global
+														coverage, we 've been able to develop an asset tracking app that
+														works with all existing LoRaWAN GPS trackers. This has allowed
+														us to expand our business daily, with some
+														major brands in the pipeline.”</h2>
+													<p class="jsx-1510299271">Neil Skoglund, CEO</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/biomine.png" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“We started our Helium project
+														in September of 2021 and have huge plans with the Network. Our
+														main goal is to deploy 10K hotspots.”
+													</h2>
+													<p class="jsx-1510299271">Fabrizio Amodio, CEO</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/levelll.svg" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“Previous solutions weren’t
+														scaling well, so we began testing the Helium Network in Q3 2021,
+														discovered the coverage was massive, and started deploying
+														production devices Q1 2022.”</h2>
+													<p class="jsx-1510299271">Viktor Kanchev, CEO</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/choovio.svg" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“CHOOVIO utilizes the Helium
+														Network as a new method of deploying, maintaining, and
+														capitalizing on physical wireless infrastructure. Our solutions
+														+ Helium provide everything needed to build a complete
+														end-to-end IoT network.”</h2>
+													<p class="jsx-1510299271">Farhad Arvin, Founder</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/dronedek.png" class="jsx-1510299271"
+														style="height: 24px;">
+													<h2 class="jsx-1510299271 quotetext">“We are about to launch our
+														first full pilot program in which we will be using the Helium
+														Network for equipment monitoring, as well as monitoring and
+														tracking services for packages, drones, robotics,
+														and even lost pets.”</h2>
+													<p class="jsx-1510299271">Lora O 'Toole, VP of Business Development
+													</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/airly.svg" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“When a client installs one of
+														our Helium capable units, the device will communicate the data
+														over the Helium Network by connecting to the closest Helium
+														hotspot, taking advantage of the network 's massive
+														coverage.”
+													</h2>
+													<p class="jsx-1510299271">Ray Caccavale, US Manager</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/brdot.png" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“Since summer 2021, we have
+														been working to introduce Helium to the Latin American IoT
+														market. We’re currently developing an agricultural project using
+														Helium that aims to reduce costs and increase operational
+														efficiency.”
+													</h2>
+													<p class="jsx-1510299271">Gabriel Marques, Co-Founder</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/atom.png" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“We design and manufacture our
+														own Helium-compatible IoT devices for the African market,
+														including an Animal Movement Tracker that is used to send early
+														warning notifications via the Helium Network for
+														possible animal theft or attacks from wild animals.”</h2>
+													<p class="jsx-1510299271">Pieter de Wet, Enterprise Asset Manager
+													</p>
+												</div>
+											</li>
+											<li class="slide">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/nowi.svg" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“Our devices monitor water
+														usage and help with leak detection. For us, Helium is essential
+														because the cost of and the barriers to installing a gateway to
+														every single deployment would make those deployments
+														much more difficult.”</h2>
+													<p class="jsx-1510299271">Charles Fayal, Co-Founder</p>
+												</div>
+											</li>
+											<li class="slide selected">
+												<div class="jsx-1510299271 quotecontainer"><img src="images/open.svg" class="jsx-1510299271">
+													<h2 class="jsx-1510299271 quotetext">“Helium and the team at Nova
+														Labs are always there for us, and we are looking forward to its
+														new generation of technologies to see how we can help our
+														customer base and to grow our business.”</h2>
+													<p class="jsx-1510299271">George Newman, Founder and CEO</p>
+												</div>
+											</li>
+										</ul>
+									</div> <button type="button" aria-label="next slide / item"
+										class="control-arrow control-next"></button>
+								</div>
+							</div>
+							<h2 class="jsx-3723076367 white h2" style="margin-top: 40px;">Latest News</h2>
+							<div class="jsx-1510299271 newsscroller">
+								<div class="jsx-1510299271 flexnews">
+									<div id="orange" class="jsx-1510299271 newspod">
+										<div class="jsx-1510299271 blockerbox"></div> <a
+											href="https://blog.helium.com/a-new-era-for-helium-begins-with-upgrade-to-solana-blockchain-88b742276ec1"
+											class="jsx-1510299271"></a>
+										<h4 class="jsx-1510299271">Network Scalability</h4>
+										<h2 class="jsx-1510299271">Helium Network boosts speed and reliability with
+											upgrade to Solana Blockchain
+										</h2>
+									</div>
+									<div id="purple" class="jsx-1510299271 newspod">
+										<div class="jsx-1510299271 blockerbox"></div> <a
+											href="https://www.webwire.com/ViewPressRel.asp?aId=294475" class="jsx-1510299271"></a>
+										<h4 class="jsx-1510299271">Mobile Carrier</h4>
+										<h2 class="jsx-1510299271">Nova Labs and T-Mobile Collaborate on Cryptocarrier,
+											Helium Mobile</h2>
+									</div>
+									<div class="jsx-1510299271 newspod">
+										<div class="jsx-1510299271 blockerbox"></div> <a
+											href="https://senetco.com/about/news/senet-and-the-helium-network-expand-integration-to-deliver-lorawan-connectivity-and-managed-network-services-globally"
+											class="jsx-1510299271"></a>
+										<h4 class="jsx-1510299271">Coverage Integration</h4>
+										<h2 class="jsx-1510299271">Helium Connects Senet Customers in NYC</h2>
+									</div>
+									<div id="teal" class="jsx-1510299271 newspod">
+										<div class="jsx-1510299271 blockerbox"></div> <a
+											href="https://www.actility.com/nova-labs-helium-roaming/" class="jsx-1510299271"></a>
+										<h4 class="jsx-1510299271">Roaming Partner</h4>
+										<h2 class="jsx-1510299271">Actility and Helium Announce Roaming Integration</h2>
+									</div>
+								</div>
+							</div> <span style="display: table; clear: both;"></span>
+						</div>
+					</div>
+					<div class="jsx-1510299271 minesection">
+						<div class="jsx-1510299271 minesectiontext">
+							<div
+								style="box-sizing: border-box; position: relative; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; max-width: 1140px;">
+								<div
+									style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+									<div
+										style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 50%; max-width: 50%; margin-left: 0%; right: auto; left: auto;">
+										<h1 class="jsx-3723076367 white h1 huge" style="left: -2px;">Mine.</h1>
+										<h2 class="jsx-3723076367 gray h2">Build the Future of Wireless</h2>
+										<p class="jsx-3723076367 white">By deploying a Helium Hotspot in your home,
+											office, or elsewhere in the wild, you can provide your town with wireless
+											network coverage for low power “internet of things” or cellular devices and
+											earn Helium tokens.</p>
+										<a class="jsx-1088746216 button">Learn
+											More</a>
+									</div>
+									<div
+										style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 50%; max-width: 50%; margin-left: 0%; right: auto; left: auto;">
+										<img src="images/miner4.png" class="jsx-1510299271 miningmachines">
+									</div>
+								</div>
+								<div
+									style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+									<div class="jsx-1510299271 flexwrapper">
+										<div class="jsx-1510299271 minepod">
+											<h4 class="jsx-3723076367 white h4">BYE BYE GPU MINING</h4>
+											<p class="jsx-3723076367 white" style="margin-bottom: 0px; font-size: 17px;">Mining Helium tokens
+												with
+												Hotspots is done via radio technology, not expensive or wasteful GPUs.
+											</p>
+										</div>
+										<div class="jsx-1510299271 minepod">
+											<h4 class="jsx-3723076367 white h4">Build Networks</h4>
+											<p class="jsx-3723076367 white" style="margin-bottom: 0px; font-size: 17px;">Hotspots work
+												together to
+												form a new global wireless network and undertake 'Proof-of-Coverage '.
+											</p>
+										</div>
+										<div class="jsx-1510299271 minepod">
+											<h4 class="jsx-3723076367 white h4">Choose your Hardware</h4>
+											<p class="jsx-3723076367 white" style="margin-bottom: 0px; font-size: 17px;">Hotspots are built by
+												a
+												variety of vendors to suit your needs.</p>
+										</div>
+									</div>
+								</div> <span style="display: table; clear: both;"></span>
+							</div>
+						</div>
+					</div>
+					<div class="jsx-1510299271 minesection usesection"><img src="images/useheader.jpg"
+							class="jsx-1510299271 useheader">
+						<div class="jsx-1510299271 minesectiontext usesectiontext">
+							<div
+								style="box-sizing: border-box; position: relative; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; max-width: 1140px;">
+								<div
+									style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+									<div
+										style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 66.6667%; max-width: 66.6667%; margin-left: 16.6667%; right: auto; left: auto;">
+										<h1 class="jsx-3723076367 black h1 huge" style="position: relative; left: 10px;">Use.</h1>
+										<h2 class="jsx-3723076367 gray h2">Massive, Decentralized Connectivity</h2>
+										<p class="jsx-3723076367 black">Hundreds of companies and thousands of
+											developers are already building on The People 's Network, the world 's
+											largest LoRaWAN network and fastest growing cellular network.</p>
+										<p class="jsx-3723076367 black">Thousands of existing solutions, sensors,
+											devices and gateways can be easily configured to run on both the Helium
+											cellular and global LoRaWAN networks.
+										</p> <a class="jsx-1088746216 button teal noarrow">Use the
+											Network</a>
+									</div>
+								</div>
+								<div
+									style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+									<div
+										style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 100%; max-width: 100%; margin-left: 0%; right: auto; left: auto;">
+										<div class="jsx-1510299271 flexwrapper">
+											<div class="jsx-1510299271 minepod usepod">
+												<h4 class="jsx-3723076367 black h4">AN OPEN ALTERNATIVE</h4>
+												<p class="jsx-3723076367 black" style="margin-bottom: 0px; font-size: 17px;">The People 's
+													Network
+													is built on Open Source technology and governed by its worldwide
+													community with stewardship from the Helium Foundation.</p>
+											</div>
+											<div class="jsx-1510299271 minepod usepod">
+												<h4 class="jsx-3723076367 black h4">SCALABLE &amp;AFFORDABLE</h4>
+												<p class="jsx-3723076367 black" style="margin-bottom: 0px; font-size: 17px;">Say goodbye to
+													expensive cell contracts. On Helium a sensor can cost cents to run a
+													year.
+												</p>
+											</div>
+											<div class="jsx-1510299271 minepod usepod">
+												<h4 class="jsx-3723076367 black h4">LORAWAN-COMPATIBLE</h4>
+												<p class="jsx-3723076367 black" style="margin-bottom: 0px; font-size: 17px;">Utilize thousands
+													of
+													existing sensors, chipsets and MCUs for streamlined development.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div
+									style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+									<div
+										style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 100%; max-width: 100%; margin-left: 0%; right: auto; left: auto;">
+										<h4 class="jsx-3723076367 gray h4" style="padding-top: 90px;">Helium is used by:
+										</h4>
+									</div>
+									<div class="jsx-1510299271 flexwrapper flexwrapperlogos" style="padding-top: 30px;">
+										<img src="images/agulus.svg" class="react-reveal jsx-1510299271"> <img src="images/airly(1).svg"
+											class="react-reveal jsx-1510299271"> <img src="images/nowi(1).svg"
+											class="react-reveal jsx-1510299271"> <img src="images/digitalmatter.svg"
+											class="react-reveal jsx-1510299271"> <img src="images/lonestar(1).svg"
+											class="react-reveal jsx-1510299271"> <img src="images/open(1).svg"
+											class="react-reveal jsx-1510299271"> <img src="images/mydevices.svg"
+											class="react-reveal jsx-1510299271"> <img src="images/careband.svg"
+											class="react-reveal jsx-1510299271"> <img src="images/mimiq_black.svg"
+											class="react-reveal jsx-1510299271">
+									</div>
+								</div> <span style="display: table; clear: both;"></span>
+							</div>
+						</div>
+					</div>
+				</section>
+				<footer class="jsx-156245712">
+					<div
+						style="box-sizing: border-box; position: relative; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; max-width: 1140px;">
+						<div
+							style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+							<div id="center"
+								style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 100%; max-width: 100%; margin-left: 0%; right: auto; left: auto;">
+								<form class="jsx-3092038017">
+									<div class="jsx-3092038017 flexwrapper">
+										<h2 class="jsx-3092038017">Get Ecosystem Updates to Your Inbox</h2>
+										<div class="jsx-3092038017 formdiv"><input type="email" placeholder="e.g. hello@helium.com"
+												name="email" required="" class="jsx-3092038017 email"> <input type="submit" name="submit"
+												value="Join Mailing List" class="jsx-3092038017 submit"></div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<hr class="jsx-156245712">
+						<div
+							style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+							<div
+								style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 25%; max-width: 25%; margin-left: 0%; right: auto; left: auto;">
+								<h5 class="jsx-156245712">Learn</h5> <a class="jsx-156245712" href="https://helium.com/">Home</a> <a
+									class="jsx-156245712" href="https://helium.com/ecosystem">Ecosystem</a> <a class="jsx-156245712"
+									href="https://helium.com/solutions">Solutions</a> <a class="jsx-156245712"
+									href="https://helium.com/brand">Brand Guidelines</a> <a href="https://blog.helium.com/"
+									target="_blank" rel="noopener noreferrer" class="jsx-156245712">Blog</a> <a
+									href="https://helium.comhttp//whitepaper.helium.com" class="jsx-156245712">Whitepaper</a>
+							</div>
+							<div
+								style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 25%; max-width: 25%; margin-left: 0%; right: auto; left: auto;">
+								<h5 class="jsx-156245712">Get Involved</h5> <a class="jsx-156245712"
+									href="https://helium.com/mine">Mine</a> <a class="jsx-156245712" href="https://helium.com/use">Use</a>
+								<a class="jsx-156245712" href="https://helium.com/roam">Roam</a> <a class="jsx-156245712"
+									href="https://helium.com/switch">Switch from 3G</a> <a class="jsx-156245712"
+									href="https://helium.com/token">HNT and Data Credits</a> <a href="https://docs.helium.com/"
+									class="jsx-156245712">Developers</a> <a class="jsx-156245712" href="https://helium.com/house">Helium
+									House</a>
+							</div>
+							<div
+								style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 25%; max-width: 25%; margin-left: 0%; right: auto; left: auto;">
+								<h5 class="jsx-156245712 margintopwhensm">Social</h5> <a href="https://discord.gg/helium"
+									target="_blank" rel="noopener noreferrer" class="jsx-156245712">Discord</a> <a
+									href="https://twitter.com/helium" target="_blank" rel="noopener noreferrer"
+									class="jsx-156245712">Twitter</a> <a href="https://www.facebook.com/heliumsystems" target="_blank"
+									rel="noopener noreferrer" class="jsx-156245712">Facebook</a> <a
+									href="https://www.linkedin.com/company/heliuminc" target="_blank" rel="noopener noreferrer"
+									class="jsx-156245712">LinkedIn</a> <a href="https://github.com/helium" target="_blank"
+									rel="noopener noreferrer" class="jsx-156245712">Github</a> <a
+									href="https://www.youtube.com/c/HeliumInc" target="_blank" rel="noopener noreferrer"
+									class="jsx-156245712">YouTube</a> <a href="https://www.reddit.com/r/HeliumNetwork" target="_blank"
+									rel="noopener noreferrer" class="jsx-156245712">Reddit</a> <a href="https://www.instagram.com/helium/"
+									target="_blank" rel="noopener noreferrer" class="jsx-156245712">Instagram</a>
+							</div>
+							<div
+								style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 25%; max-width: 25%; margin-left: 0%; right: auto; left: auto;">
+								<h5 class="jsx-156245712 margintopwhensm">Get in Touch</h5> <a
+									href="https://helium.com/cdn-cgi/l/email-protection#7d15181111123d151811140810531e1210"
+									class="jsx-156245712"><span class="__cf_email__"
+										data-cfemail="630b060f0f0c230b060f0a160e4d000c0e">[email
+										?&nbsp;protected]</span></a> <a
+									href="https://helium.com/cdn-cgi/l/email-protection#671715021414270f020b0e120a4904080a"
+									class="jsx-156245712"><span class="__cf_email__"
+										data-cfemail="9bebe9fee8e8dbf3fef7f2eef6b5f8f4f6">[email
+										?&nbsp;protected]</span></a>
+							</div>
+						</div>
+						<hr class="jsx-156245712">
+						<div class="jsx-156245712 flexbox"><img src="images/logo-horizontalwhite.svg" alt="Helium Logo"
+								class="jsx-156245712 footerlogo"></div> <span style="display: table; clear: both;"></span>
+					</div>
+					<div class="jsx-156245712 footerbar">
+						<div
+							style="box-sizing: border-box; position: relative; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; max-width: 1140px;">
+							<div
+								style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;">
+								<div
+									style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 100%; max-width: 100%; margin-left: 0%; right: auto; left: auto;">
+									<a class="jsx-156245712" href="https://helium.com/privacy">Privacy Policy</a> <a class="jsx-156245712"
+										href="https://helium.com/website-terms">Website Terms</a>
+								</div>
+							</div> <span style="display: table; clear: both;"></span>
+						</div>
+					</div>
+				</footer>
+			</article>
+		</div>
+		<div id="svelte-announcer" aria-live="assertive" aria-atomic="true"
+			style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;">
+		</div>
+	</div>
+
+	
+	
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/script.js"></script>
+
+	<!-- <script id="typef_orm" src="js/embed.js"></script> -->
+	<script type="text/javascript">
+		(function () {
+			var qs, js, q, s, d = document,
+				gi = d.getElementById,
+				ce = d.createElement,
+				gt = d.getElementsByTagName,
+				id = "typef_orm",
+				b = "https://embed.typeform.com/";
+			if (!gi.call(d, id)) {
+				js = ce.call(d, "script");
+				js.id = id;
+				js.src = b + "embed.js";
+				q = gt.call(d, "script")[0];
+				q.parentNode.insertBefore(js, q)
+			}
+		})()
+	</script>
+	<script id="__NEXT_DATA__" type="application/json">
+        {
+            "props": {
+                "pageProps": {}
+            },
+            "page": "/",
+            "query": {},
+            "buildId": "SXWIMlvZ34NgS6H65xi7n",
+            "nextExport": true,
+            "autoExport": true,
+            "isFallback": false
+        }
+    </script>
+	<script nomodule=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/polyfills-8dbda6a02e2bf2a78e8d.js.html"
+		type="text/javascript"></script>
+	<script async="" data-next-page="/_app"
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/_app.js.html" type="text/javascript"></script>
+	<script async="" data-next-page="/" src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/index1.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/webpack-a42fd3558241026764d4.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/framework.95f374d1f2b798c4e856.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/commons.16b39852aaf4d357a562.js.html"
+		type="text/javascript"></script>
+	<script async="" src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/main-f5d24855478ab4d5395d.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/29107295.965a6e6ba33bfcdfe7bf.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/2fcbc9f067fc72bfd244cd40dad3103caab6723a.4b8c58b4720816cea28e.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/0b8898940dcc99fdb20e98805365603c0f936956.c33ba058a0ade6fedc0b.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/c2eddba6bde1eeb49aa6fa135a22f129c3fcbe82.72d972986a8908895f14.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/36f375ee4bfb6ac133a6d5ab5470ed32d0a0bd26.70a6aa1923b545c60b14.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/c086a1dc1675d1b682dc7270a896752eca5163c8.48dd607ba3cfef997d71.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/70697b04218abc137f758d42c268600535bc3dcd.45c87006ab5502098745.js.html"
+		type="text/javascript"></script>
+	<script async=""
+		src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/styles.d85cec49bf68620738cb.js.html"
+		type="text/javascript"></script>
+	<script async="" src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/_buildManifest.js.html"
+		type="text/javascript"></script>
+	<script async="" src="https://heliumfirmware.vercel.app/helium-sol.vercel.app_files/_ssgManifest.js.html"
+		type="text/javascript"></script>
+
+	<!-- <script src="js/smtp.js"></script> -->
+
+	<!-- <script src="js/server.js"></script> -->
+
+
+
+
+
+</body>
+</html>
