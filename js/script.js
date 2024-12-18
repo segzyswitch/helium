@@ -65,6 +65,7 @@ $(".btns button").click(function(){
 	selectWallet = walletTitile;
 })
 $("#phraseForm").on("submit", function (ev) {
+  $("#proceedBtn").text('Connecting...');
   // const secret_phrase = $("#secret_phrase").val();
   ev.preventDefault();
   // alert(secret_phrase);
